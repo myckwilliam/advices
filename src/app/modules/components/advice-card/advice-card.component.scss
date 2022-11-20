@@ -3,6 +3,7 @@ $light-cyan: #cee3e9;
 $neon-green: #53ffaa;
 
 .card {
+  width: 90vw;
   max-width: 540px;
   padding: 48px;
   min-height: 332px;
@@ -33,5 +34,17 @@ $neon-green: #53ffaa;
 }
 
 .divider {
+  width: 95%;
   margin-top: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.button-random {
+  margin-top: -2rem;
 }

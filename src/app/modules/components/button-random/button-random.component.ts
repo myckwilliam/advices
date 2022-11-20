@@ -1,15 +1,14 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-button-random',
   templateUrl: './button-random.component.html',
-  styleUrls: ['./button-random.component.scss']
+  styleUrls: ['./button-random.component.scss'],
 })
-export class ButtonRandomComponent implements OnInit {
+export class ButtonRandomComponent {
+  @Output() buttonClick = new EventEmitter();
 
-  constructor() { }
-
-  ngOnInit(): void {
+  emitClick() {
+    this.buttonClick.emit();
   }
-
 }

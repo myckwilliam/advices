@@ -1,13 +1,34 @@
-<div class="card">
-  <p class="advice-number">ADVICE #117</p>
-  <p class="advice">
-    <q
-      >It is easy to sit up and take notice, what's difficult is getting up and
-      taking action.</q
-    >
-  </p>
+<div class="container">
+  <div class="card">
+    <p class="advice-number">
+      <span *ngIf="!(isLoading$ | async)">ADVICE #{{ slip.id }}<br /> </span>
+      <ngx-skeleton-loader
+        *ngIf="isLoading$ | async"
+        count="1"
+        [theme]="{
+          'height.px': 13,
+          'width.px': 120,
+          'background-color': '#53ffaa'
+        }"
+      ></ngx-skeleton-loader>
+    </p>
+    <p class="advice">
+      <q *ngIf="!(isLoading$ | async)">{{ slip.advice }}</q>
+      <ngx-skeleton-loader
+        *ngIf="isLoading$ | async"
+        count="3"
+        [theme]="{
+          'height.px': 28,
+          'width.vw': 70,
+          'max-width.px': 400,
+          'background-color': '#cee3e9'
+        }"
+      ></ngx-skeleton-loader>
+    </p>
 
-  <img class="divider" src="assets/divider.svg" alt="" />
-
-  <app-button-random></app-button-random>
+    <img class="divider" src="assets/divider.svg" alt="" />
+  </div>
+  <div class="button-random">
+    <app-button-random (buttonClick)="emitClick()"></app-button-random>
+  </div>
 </div>

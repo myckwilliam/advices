@@ -1,15 +1,28 @@
-import { Component, OnInit } from '@angular/core';
+import {
+  Component,
+  EventEmitter,
+  inject,
+  Input,
+  OnInit,
+  Output,
+} from '@angular/core';
+import { LoadingService } from 'src/app/core/services/loading.service';
+import { Slip } from 'src/app/shared/models/advice';
 
 @Component({
   selector: 'app-advice-card',
   templateUrl: './advice-card.component.html',
-  styleUrls: ['./advice-card.component.scss']
+  styleUrls: ['./advice-card.component.scss'],
 })
-export class AdviceCardComponent implements OnInit {
+export class AdviceCardComponent {
+  @Input() slip!: Slip;
+  @Output() buttonClick = new EventEmitter();
 
-  constructor() { }
+  private loadingService = inject(LoadingService);
 
-  ngOnInit(): void {
+  isLoading$ = this.loadingService.isLoading$;
+
+  emitClick() {
+    this.buttonClick.emit();
   }
-
 }

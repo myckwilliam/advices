@@ -1,3 +1,4 @@
 export const environment = {
-  production: true
+  production: true,
+  urls: { ADVICE: 'https://api.adviceslip.com/advice' },
 };
