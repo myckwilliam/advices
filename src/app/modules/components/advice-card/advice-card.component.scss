@@ -1,0 +1,37 @@
+$dark-grayish-blue: #313a48;
+$light-cyan: #cee3e9;
+$neon-green: #53ffaa;
+
+.card {
+  max-width: 540px;
+  padding: 48px;
+  min-height: 332px;
+  background-color: $dark-grayish-blue;
+  color: $light-cyan;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Manrope", sans-serif;
+  font-weight: 800;
+}
+
+.advice-number {
+  font-size: 13px;
+  line-height: 17.76px;
+  color: $neon-green;
+  letter-spacing: 4.08571px;
+}
+
+.advice {
+  font-size: 28px;
+  line-height: 38.25px;
+  text-align: center;
+  margin-top: 1.5rem;
+  letter-spacing: -0.3px;
+}
+
+.divider {
+  margin-top: 2.5rem;
+}

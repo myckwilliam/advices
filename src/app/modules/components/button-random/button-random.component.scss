@@ -1,0 +1,20 @@
+$neon-green: #53ffaa;
+
+button {
+  width: 64px;
+  height: 64px;
+  background-color: $neon-green;
+  border-radius: 50%;
+  border: none;
+  outline: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2.5rem;
+  margin-bottom: -5rem;
+
+  &:hover {
+    box-shadow: 0 0 50px $neon-green;
+    cursor: pointer;
+  }
+}

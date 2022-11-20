@@ -1,0 +1,8 @@
+$dark-blue: #202733;
+.container {
+  height: 100vh;
+  background-color: $dark-blue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
