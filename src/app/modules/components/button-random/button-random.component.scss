@@ -16,3 +16,15 @@ button {
     cursor: pointer;
   }
 }
+
+@media (max-width: 768px) {
+  button {
+    &:hover {
+      box-shadow: none;
+    }
+
+    &:active {
+      box-shadow: 0 0 50px $neon-green;
+    }
+  }
+}
